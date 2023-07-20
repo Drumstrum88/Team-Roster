@@ -3,27 +3,32 @@ import { useEffect, useState } from 'react';
 import { FloatingLabel, Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { createMember, getMembers, updateMember } from './API/memberData';
+import { useAuth } from '../utils/context/authContext';
 
 const initialState = {
   firstName: '',
   lastName: '',
+  email: '',
   role: '',
 };
 
 function MemberForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
+  // eslint-disable-next-line no-unused-vars
   const [members, setMembers] = useState([]);
   const router = useRouter();
+  const { user } = useAuth();
 
   useEffect(() => {
-    getMembers().then(setMembers);
-    if (obj.firebaseKey) setFormInput(obj); // Use 'obj' to set the form input if it has a firebaseKey
-  }, [obj]);
+    getMembers(user.uid).then(setMembers);
+    if (obj.firebaseKey) setFormInput(obj);
+  }, [obj, user]);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormInput((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
@@ -32,7 +37,7 @@ function MemberForm({ obj }) {
     if (obj.firebaseKey) {
       updateMember(formInput).then(() => router.push(`/member/${obj.firebaseKey}`));
     } else {
-      const payload = { ...formInput, uid: members.uid };
+      const payload = { ...formInput, uid: user.uid };
       createMember(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateMember(patchPayload).then(() => {
@@ -68,6 +73,17 @@ function MemberForm({ obj }) {
         />
       </FloatingLabel>
 
+      <FloatingLabel controlId="floatingInput" label="Email">
+        <Form.Control
+          type="email"
+          name="email"
+          value={formInput.email}
+          onChange={handleChange}
+          placeholder="Email"
+          required
+        />
+      </FloatingLabel>
+
       <FloatingLabel controlId="floatingInput" label="Role">
         <Form.Control
           type="text"
@@ -90,6 +106,7 @@ MemberForm.propTypes = {
   obj: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,
+    email: PropTypes.string,
     role: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
