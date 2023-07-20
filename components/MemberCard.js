@@ -22,9 +22,10 @@ function MemberCard({ memberObj, onUpdate }) {
         <Link href={`/members/${memberObj.firebaseKey}`} passHref>
           <Button variant="primary">View</Button>
         </Link>
-        <Link href={`/members/edit/${memberObj.firebaseKey}`} passHref>
+        <Link href={`/members/Edit/${memberObj.firebaseKey}`} passHref>
           <Button variant="info">Edit</Button>
         </Link>
+
         <Button variant="danger" onClick={deleteThisMember}>Delete</Button>
       </Card.Body>
     </Card>

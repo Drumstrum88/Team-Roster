@@ -1,72 +1,82 @@
 [
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLA9dSsxqM6v-8O_l",
     "firstName": "Brandon",
     "lastName": "Marin",
     "role": "Guitar/Vocals",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "brandon@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLI3cMWUgkg-wS0lm",
     "firstName": "Taylor",
     "lastName": "Saling",
     "role": "Guitar/Vocals",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "taylor@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLLViokOj9pVHHAVl",
     "firstName": "Liz",
     "lastName": "Anderson",
     "role": "Vocalist",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "liz@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLPOetcblQjKV7j_7",
     "firstName": "Jared",
     "lastName": "Anderson",
     "role": "Keyboard/Vocalist",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "jared@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLWNboBMCCwI5RUh7",
     "firstName": "Daniel",
     "lastName": "Mangrum",
     "role": "Drummer",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "daniel@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLYpUxZFabZsq4AN7",
     "firstName": "Ben",
     "lastName": "Williams",
     "role": "Bass",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "ben@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLbU3589OXcJLuI7Z",
     "firstName": "Victoria",
     "lastName": "Mangrum",
     "role": "Vocalist",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "victoria@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLdi1jHB_a-yh22A1",
     "firstName": "Eddie",
     "lastName": "Sloan",
     "role": "Pianist",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "eddie@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "-N_kLfslNuBWZ8ClT-rZ",
     "firstName": "Bryan",
     "lastName": "Blish",
     "role": "Vocalist",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "bryan@example.com"
   },
   {
-    "firebaseKey": "",
+    "firebaseKey": "N_kLiOtPdlS2mOnuTiq",
     "firstName": "Regina",
     "lastName": "Sloan",
     "role": "Vocalist",
-    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
+    "email": "regina@example.com"
   }
 ]
