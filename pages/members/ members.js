@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
@@ -9,36 +9,29 @@ function Members() {
   const [members, setMembers] = useState([]);
   const { user } = useAuth();
 
-  const getAllMembers = useCallback(() => {
+  useEffect(() => {
     getMembers(user.uid).then(setMembers);
   }, [user.uid]);
 
-  useEffect(() => {
-    getAllMembers();
-  }, [getAllMembers]);
-
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <Link href="/members/new" passHref>
-        <Button variant="primary" type="button">
-          Add Member
-        </Button>
-      </Link>
-      {members.map((member) => (
-        <MemberCard
-          key={member.firebaseKey}
-          memberObj={member}
-          onUpdate={getAllMembers}
-        />
-      ))}
+    <div className="team">
+      <h1>The Team!</h1>
+      <div className="add-member">
+        <Link href="/members/new" passHref>
+          <Button variant="info" type="button">
+            Add Member
+          </Button>
+        </Link>
+      </div>
+      <div className="card-container" data-testid="members-container" id="members-container">
+        {members.map((member) => (
+          <MemberCard
+            key={member.firebaseKey}
+            memberObj={member}
+            onUpdate={() => getMembers(user.uid).then(setMembers)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

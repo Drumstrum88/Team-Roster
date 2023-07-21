@@ -13,7 +13,7 @@ function MemberCard({ memberObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Body>
         <Card.Title>{memberObj.firstName } {memberObj.lastName}</Card.Title>
         <Card.Text>
