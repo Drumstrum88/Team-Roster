@@ -40,9 +40,104 @@ a {
 .add-member {
   margin-top: 20px;
   margin-bottom: 50px;
+  background-color: violet;
+  color: black;
+  border: 1px solid black;
+}
+
+.add-member:hover {
+  background-color: lightgrey;
+  color: black;
+  border: 1px solid black;
 }
 
 .card-container {
   display: flex;
   justify-content: space-between;
+}
+
+.edit {
+  margin:5px;
+  background-color: lightblue;
+  color: black;
+  border: none;
+  border: black 1px solid;
+}
+
+.edit:hover {
+  background-color: lightgrey;
+  color: black;
+  border: black 1px solid;
+}
+
+.view {
+  margin:5px;
+  background-color: lightgreen;
+  color: black;
+  border: black 1px solid;
+
+}
+
+.view:hover {
+  background-color: lightgrey;
+  color: black;
+  border: black 1px solid;
+}
+
+.delete {
+  margin:5px;
+  background-color: lightcoral;
+  color: black;
+  border: black 1px solid;
+}
+
+.delete:hover {
+  background-color: lightgrey;
+  color: black;
+  border: black 1px solid;
+}
+
+.member-card {
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: lightgrey;
+  color: black;
+  border-radius: 10px;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.meet-greet {
+  background-color: violet;
+  color: black;
+  border: 1px solid black;
+  width: 35%;
+}
+
+.meet-greet:hover {
+  background-color: lightgrey;
+  color: black;
+  border: 1px solid black;
+}
+
+.copy-btn {
+  background-color: violet;
+  color: black;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.copy-btn:hover {
+  background-color: lightgrey;
+  color: black;
+  border: 1px solid black;
+}
+
+cursor-pointer {
+  cursor: pointer;
 }

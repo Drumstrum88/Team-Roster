@@ -18,8 +18,9 @@ function Team() {
 
   return (
     <div className="text-center mt-4">
+      <h1>The Team!</h1>
       <Link href="/members/new" passHref>
-        <Button variant="primary" type="button">
+        <Button className="add-member" variant="primary" type="button">
           Add Member
         </Button>
       </Link>
