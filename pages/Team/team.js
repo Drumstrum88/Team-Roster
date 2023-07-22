@@ -26,7 +26,7 @@ function Team() {
 
   return (
     <div className="text-center mt-4">
-      <h1>The Team!</h1>
+      <h1>Your Bandmates!</h1>
       <div className="d-flex justify-content-center">
         <SearchBar onSearch={handleSearch} />
       </div>
