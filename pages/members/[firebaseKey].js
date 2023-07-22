@@ -21,7 +21,7 @@ export default function MemberDetails() {
   }
 
   return (
-    <div>
+    <div className="single-member">
       <h1>Member Details</h1>
       <h3>Band Member: {memberData.firstName} {memberData.lastName}</h3>
       <h4>Email: {memberData.email}</h4>
