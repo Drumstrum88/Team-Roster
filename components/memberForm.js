@@ -48,57 +48,59 @@ function MemberForm({ obj }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h2 className="text-center">{obj.firebaseKey ? 'Update Member' : 'Add Member'}</h2>
+    <div className="member-form">
+      <Form onSubmit={handleSubmit}>
+        <h2 className="text-center">{obj.firebaseKey ? 'Update Member' : 'Add Member'}</h2>
 
-      <FloatingLabel controlId="floatingInput" label="First Name">
-        <Form.Control
-          type="text"
-          name="firstName"
-          value={formInput.firstName}
-          onChange={handleChange}
-          placeholder="First Name"
-          required
-        />
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingInput" label="First Name">
+          <Form.Control
+            type="text"
+            name="firstName"
+            value={formInput.firstName}
+            onChange={handleChange}
+            placeholder="First Name"
+            required
+          />
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput" label="Last Name">
-        <Form.Control
-          type="text"
-          name="lastName"
-          value={formInput.lastName}
-          onChange={handleChange}
-          placeholder="Last Name"
-          required
-        />
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingInput" label="Last Name">
+          <Form.Control
+            type="text"
+            name="lastName"
+            value={formInput.lastName}
+            onChange={handleChange}
+            placeholder="Last Name"
+            required
+          />
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput" label="Email">
-        <Form.Control
-          type="email"
-          name="email"
-          value={formInput.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingInput" label="Email">
+          <Form.Control
+            type="email"
+            name="email"
+            value={formInput.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+        </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput" label="Role">
-        <Form.Control
-          type="text"
-          name="role"
-          value={formInput.role}
-          onChange={handleChange}
-          placeholder="Role"
-          required
-        />
-      </FloatingLabel>
+        <FloatingLabel controlId="floatingInput" label="Role">
+          <Form.Control
+            type="text"
+            name="role"
+            value={formInput.role}
+            onChange={handleChange}
+            placeholder="Role"
+            required
+          />
+        </FloatingLabel>
 
-      <Button variant="primary" type="submit">
-        {obj.firebaseKey ? 'Update' : 'Submit'}
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit">
+          {obj.firebaseKey ? 'Update' : 'Submit'}
+        </Button>
+      </Form>
+    </div>
   );
 }
 
