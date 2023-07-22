@@ -96,7 +96,7 @@ function MemberForm({ obj }) {
           />
         </FloatingLabel>
 
-        <Button variant="primary" type="submit">
+        <Button className="submit-form" variant="primary" type="submit">
           {obj.firebaseKey ? 'Update' : 'Submit'}
         </Button>
       </Form>

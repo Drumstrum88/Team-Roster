@@ -46,7 +46,7 @@ a {
 }
 
 .add-member:hover {
-  background-color: lightgrey;
+  background-color: magenta;
   color: black;
   border: 1px solid black;
 }
@@ -65,7 +65,7 @@ a {
 }
 
 .edit:hover {
-  background-color: lightgrey;
+  background-color:darkslateblue;
   color: black;
   border: black 1px solid;
 }
@@ -79,7 +79,7 @@ a {
 }
 
 .view:hover {
-  background-color: lightgrey;
+  background-color: darkolivegreen;
   color: black;
   border: black 1px solid;
 }
@@ -92,7 +92,7 @@ a {
 }
 
 .delete:hover {
-  background-color: lightgrey;
+  background-color: red;
   color: black;
   border: black 1px solid;
 }
@@ -104,7 +104,7 @@ a {
   background-color: silver;
   color: black;
   border-radius: 10px;
-  border: black 1px solid;
+  border: violet 2px inset;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -115,12 +115,12 @@ a {
 .meet-greet {
   background-color: violet;
   color: black;
-  border: 1px solid black;
+  border: 1px inset black;
   width: 35%;
 }
 
 .meet-greet:hover {
-  background-color: lightgrey;
+  background-color: darkmagenta;
   color: black;
   border: 1px solid black;
 }
@@ -133,7 +133,7 @@ a {
 }
 
 .copy-btn:hover {
-  background-color: lightgrey;
+  background-color: darkmagenta;
   color: black;
   border: 1px solid black;
 }
@@ -147,6 +147,11 @@ cursor-pointer {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: silver;
+  border: inset 2px violet;
+  border-radius: 50px;
+  color: black;
+
 }
 
 .member-form-content {
@@ -161,4 +166,46 @@ cursor-pointer {
   @media (min-width: 992px) {
     width: 50%; 
   }
+}
+
+.search-bar {
+  margin: 10px;
+  width: 300px;
+  height: 50px;
+  background-color: silver;
+  color: black;
+  border-radius: 10px;
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.submit-form {
+  background-color: violet;
+  color: black;
+  border: 1px solid black;
+}
+
+.submit-form:hover {
+  background-color: darkmagenta;
+  color: black;
+  border: 1px solid black;
+}
+
+.single-member {
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: silver;
+  color: black;
+  border-radius: 10px;
+  border: violet 2px inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }

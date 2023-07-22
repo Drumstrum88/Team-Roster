@@ -11,7 +11,7 @@ function Home() {
         <h1>Hi, {user.displayName}!</h1>
         <h2>Welcome to the Band Manager!</h2>
         <Link href="/Team/team" passHref>
-          <Button className="meet-greet" variant="primary">Meet The Team!</Button>
+          <Button className="meet-greet" variant="primary">Meet The Band!</Button>
         </Link>
       </div>
 
