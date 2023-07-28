@@ -25,6 +25,7 @@ export default function MemberDetails() {
       <h1>Member Details</h1>
       <h3>Band Member: {memberData.firstName} {memberData.lastName}</h3>
       <h4>Email: {memberData.email}</h4>
+      <h4>Band: {memberData.band}</h4>
       <h4>Role: {memberData.role}</h4>
     </div>
   );

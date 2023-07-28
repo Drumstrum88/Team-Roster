@@ -19,6 +19,9 @@ function MemberCard({ memberObj, onUpdate }) {
         <Card.Text>
           {memberObj.role}
         </Card.Text>
+        <Card.Text>
+          {memberObj.band}
+        </Card.Text>
         <Link href={`/members/${memberObj.firebaseKey}`} passHref>
           <Button className="view" variant="primary">View</Button>
         </Link>
@@ -37,6 +40,7 @@ MemberCard.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     role: PropTypes.string,
+    band: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

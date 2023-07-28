@@ -5,7 +5,9 @@
     "lastName": "Marin",
     "role": "Guitar/Vocals",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "brandon@example.com"
+    "email": "brandon@example.com",
+    "band": "student",
+    "bandFirebaseKey": "firebaseKey_of_student_band"
   },
   {
     "firebaseKey": "-N_kLI3cMWUgkg-wS0lm",
@@ -13,7 +15,9 @@
     "lastName": "Saling",
     "role": "Guitar/Vocals",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "taylor@example.com"
+    "email": "taylor@example.com",
+    "band": "midweek",
+    "bandFirebaseKey": "firebaseKey_of_midweek_band"
   },
   {
     "firebaseKey": "-N_kLLViokOj9pVHHAVl",
@@ -21,7 +25,9 @@
     "lastName": "Anderson",
     "role": "Vocalist",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "liz@example.com"
+    "email": "liz@example.com",
+    "band": "sunday",
+    "bandFirebaseKey": "firebaseKey_of_sunday_band"
   },
   {
     "firebaseKey": "-N_kLPOetcblQjKV7j_7",
@@ -29,7 +35,9 @@
     "lastName": "Anderson",
     "role": "Keyboard/Vocalist",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "jared@example.com"
+    "email": "jared@example.com",
+    "band": "midweek",
+    "bandFirebaseKey": "firebaseKey_of_midweek_band"
   },
   {
     "firebaseKey": "-N_kLWNboBMCCwI5RUh7",
@@ -37,7 +45,9 @@
     "lastName": "Mangrum",
     "role": "Drummer",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "daniel@example.com"
+    "email": "daniel@example.com",
+    "band": "sunday",
+    "bandFirebaseKey": "firebaseKey_of_sunday_band"
   },
   {
     "firebaseKey": "-N_kLYpUxZFabZsq4AN7",
@@ -45,7 +55,9 @@
     "lastName": "Williams",
     "role": "Bass",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "ben@example.com"
+    "email": "ben@example.com",
+    "band": "sunday",
+    "bandFirebaseKey": "firebaseKey_of_sunday_band"
   },
   {
     "firebaseKey": "-N_kLbU3589OXcJLuI7Z",
@@ -53,7 +65,9 @@
     "lastName": "Mangrum",
     "role": "Vocalist",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "victoria@example.com"
+    "email": "victoria@example.com",
+    "band": "student",
+    "bandFirebaseKey": "firebaseKey_of_student_band"
   },
   {
     "firebaseKey": "-N_kLdi1jHB_a-yh22A1",
@@ -61,7 +75,9 @@
     "lastName": "Sloan",
     "role": "Pianist",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "eddie@example.com"
+    "email": "eddie@example.com",
+    "band": "sunday",
+    "bandFirebaseKey": "firebaseKey_of_sunday_band"
   },
   {
     "firebaseKey": "-N_kLfslNuBWZ8ClT-rZ",
@@ -69,7 +85,9 @@
     "lastName": "Blish",
     "role": "Vocalist",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "bryan@example.com"
+    "email": "bryan@example.com",
+    "band": "midweek",
+    "bandFirebaseKey": "firebaseKey_of_midweek_band"
   },
   {
     "firebaseKey": "N_kLiOtPdlS2mOnuTiq",
@@ -77,6 +95,8 @@
     "lastName": "Sloan",
     "role": "Vocalist",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2",
-    "email": "regina@example.com"
+    "email": "regina@example.com",
+    "band": "sunday",
+    "bandFirebaseKey": "firebaseKey_of_sunday_band"
   }
 ]

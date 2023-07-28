@@ -1,0 +1,20 @@
+[
+  {
+    "firebaseKey": "",
+    "name": "Sunday",
+    "description": "Sunday service",
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+  },
+  {
+    "firebaseKey": "",
+    "name": "Midweek",
+    "description": "Midweek service",
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+  },
+  {
+    "firebaseKey": "",
+    "name": "Student",
+    "description": "Student ministry",
+    "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
+  }
+]
