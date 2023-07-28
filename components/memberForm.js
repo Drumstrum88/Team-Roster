@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { FloatingLabel, Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { createMember, getMembers, updateMember } from './API/memberData';
+import { getBands } from './API/bandData'; // Import the getBands function
 import { useAuth } from '../utils/context/authContext';
 
 const initialState = {
@@ -10,18 +12,24 @@ const initialState = {
   lastName: '',
   email: '',
   role: '',
+  band: '',
 };
 
 function MemberForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
-  // eslint-disable-next-line no-unused-vars
   const [members, setMembers] = useState([]);
+  const [bands, setBands] = useState([]); // State to store the bands
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
     getMembers(user.uid).then(setMembers);
     if (obj.firebaseKey) setFormInput(obj);
+
+    // Fetch the bands and update the state
+    getBands(user.uid).then((bandsData) => {
+      setBands(bandsData);
+    });
   }, [obj, user]);
 
   const handleChange = (e) => {
@@ -96,6 +104,22 @@ function MemberForm({ obj }) {
           />
         </FloatingLabel>
 
+        <FloatingLabel controlId="floatingInput" label="Band">
+          <Form.Select
+            name="band"
+            value={formInput.band}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select a Band</option>
+            {bands.map((band) => (
+              <option key={band.firebaseKey} value={band.name}>
+                {band.name}
+              </option>
+            ))}
+          </Form.Select>
+        </FloatingLabel>
+
         <Button className="submit-form" variant="primary" type="submit">
           {obj.firebaseKey ? 'Update' : 'Submit'}
         </Button>
@@ -110,6 +134,7 @@ MemberForm.propTypes = {
     lastName: PropTypes.string,
     email: PropTypes.string,
     role: PropTypes.string,
+    band: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
 };

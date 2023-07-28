@@ -65,7 +65,7 @@ a {
 }
 
 .edit:hover {
-  background-color:darkslateblue;
+  background-color:darkblue;
   color: black;
   border: black 1px solid;
 }
