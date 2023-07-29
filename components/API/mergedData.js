@@ -2,13 +2,9 @@ import { getBandMembers, getBands, getSingleBand } from './bandData';
 import { getSingleMember } from './memberData';
 
 const viewBandDetails = (bandFirebaseKey) => new Promise((resolve, reject) => {
-  getSingleBand(bandFirebaseKey)
-    .then((bandObject) => {
-      getBandMembers(bandFirebaseKey)
-        .then((members) => {
-          resolve({ bandObject, members });
-        })
-        .catch((error) => reject(error));
+  Promise.all([getSingleBand(bandFirebaseKey), getBandMembers(bandFirebaseKey)])
+    .then(([bandObject, bandMembersArray]) => {
+      resolve({ ...bandObject, members: bandMembersArray });
     })
     .catch((error) => reject(error));
 });
