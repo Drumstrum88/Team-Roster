@@ -82,7 +82,7 @@ const getBandMembers = (bandFirebaseKey) => new Promise((resolve, reject) => {
       const members = Object.values(data);
       resolve(members);
     })
-    .catch((error) => reject(error));
+    .catch(reject);
 });
 
 export {

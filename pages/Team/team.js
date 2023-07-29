@@ -20,7 +20,9 @@ function Team() {
   const handleSearch = (query) => {
     const filteredMembers = members.filter((member) => member.firstName.toLowerCase().includes(query.toLowerCase())
     || member.lastName.toLowerCase().includes(query.toLowerCase())
+    || member.band.toLowerCase().includes(query.toLowerCase())
     || member.role.toLowerCase().includes(query.toLowerCase()));
+
     setMembers(filteredMembers);
   };
 

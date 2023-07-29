@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { FloatingLabel, Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { createMember, getMembers, updateMember } from './API/memberData';
-import { getBands } from './API/bandData'; // Import the getBands function
+import { getBands } from './API/bandData';
 import { useAuth } from '../utils/context/authContext';
 
 const initialState = {
@@ -18,15 +18,13 @@ const initialState = {
 function MemberForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const [members, setMembers] = useState([]);
-  const [bands, setBands] = useState([]); // State to store the bands
+  const [bands, setBands] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
     getMembers(user.uid).then(setMembers);
     if (obj.firebaseKey) setFormInput(obj);
-
-    // Fetch the bands and update the state
     getBands(user.uid).then((bandsData) => {
       setBands(bandsData);
     });
