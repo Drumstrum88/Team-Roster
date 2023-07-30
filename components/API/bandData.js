@@ -53,8 +53,13 @@ const createBand = (payload) => new Promise((resolve, reject) => {
     body: JSON.stringify(payload),
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
-    .catch(reject);
+    .then((data) => {
+      const firebaseKey = data.name;
+      resolve(firebaseKey);
+    })
+    .catch((error) => {
+      reject(error);
+    });
 });
 
 const updateBand = (payload) => new Promise((resolve, reject) => {

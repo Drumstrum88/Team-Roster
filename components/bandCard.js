@@ -11,7 +11,7 @@ function BandCard({ bandObj, onUpdate }) {
   }
 
   const {
-    name, description, firebaseKey,
+    bandName, description, firebaseKey,
   } = bandObj;
 
   const deleteThisBand = () => {
@@ -23,7 +23,7 @@ function BandCard({ bandObj, onUpdate }) {
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
+        <Card.Title>{bandName}</Card.Title>
         <Card.Text>
           {description}
         </Card.Text>
@@ -42,7 +42,7 @@ function BandCard({ bandObj, onUpdate }) {
 
 BandCard.propTypes = {
   bandObj: PropTypes.shape({
-    name: PropTypes.string,
+    bandName: PropTypes.string,
     description: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),

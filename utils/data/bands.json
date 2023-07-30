@@ -1,19 +1,19 @@
 [
   {
     "firebaseKey": "",
-    "name": "Sunday",
+    "bandName": "Sunday",
     "description": "Sunday service",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
   },
   {
     "firebaseKey": "",
-    "name": "Midweek",
+    "bandName": "Midweek",
     "description": "Midweek service",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
   },
   {
     "firebaseKey": "",
-    "name": "Student",
+    "bandName": "Student",
     "description": "Student ministry",
     "uid": "UjtVsIwcBkWhSfcMuhpn2YNuAXW2"
   }
