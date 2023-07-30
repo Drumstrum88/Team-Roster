@@ -1,50 +1,64 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
-import { createBand, getSingleBand } from './API/bandData';
+import { FloatingLabel, Form, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+import { createBand, updateBand, getBands } from './API/bandData';
+import { useAuth } from '../utils/context/authContext';
 
 const initialState = {
-  BandName: '',
+  bandName: '',
   description: '',
 };
 
-export default function BandForm() {
+function BandForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
-  const [obj, setObj] = useState({});
+  const [bands, setBands] = useState([]);
   const router = useRouter();
-  const { id } = router.query;
+  const { user } = useAuth();
+
+  useEffect(() => {
+    getBands(user.uid).then(setBands);
+    if (obj.firebaseKey) setFormInput(obj);
+  }, [obj, user]);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormInput((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createBand(formInput).then(() => {
-      setFormInput({ ...initialState });
-      router.push('/bands');
-    });
+    if (obj.firebaseKey) {
+      updateBand(formInput).then(() => router.push(`/band/${obj.firebaseKey}`));
+    } else {
+      const payload = { ...formInput, uid: user.uid };
+      createBand(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateBand(patchPayload).then(() => {
+        });
+      });
+    }
   };
 
-  useEffect(() => {
-    if (id) {
-      getSingleBand(id).then(setObj);
-    }
-  }, [id]);
-
   return (
-    <div className="member-form">
+    <div className="band-creation-form">
+      {bands.map((band) => (
+        <div key={band.firebaseKey}>
+          <p>Band Name: {band.bandName}</p>
+          <p>Description: {band.description}</p>
+        </div>
+      ))}
       <Form onSubmit={handleSubmit}>
-        <h2 className="text-center">{obj.firebaseKey ? 'Update Band' : 'Add Band'}</h2>
+        <h2 className="text-center">Add New Band</h2>
 
         <FloatingLabel controlId="floatingInput" label="Band Name">
           <Form.Control
             type="text"
-            name="BandName"
-            value={formInput.BandName}
+            name="bandName"
+            value={formInput.bandName}
             onChange={handleChange}
             placeholder="Band Name"
             required
@@ -63,9 +77,23 @@ export default function BandForm() {
         </FloatingLabel>
 
         <Button className="submit-form" variant="primary" type="submit">
-          {obj.firebaseKey ? 'Update' : 'Submit'}
+          Submit
         </Button>
       </Form>
     </div>
   );
 }
+
+BandForm.propTypes = {
+  obj: PropTypes.shape({
+    bandName: PropTypes.string,
+    description: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+BandForm.defaultProps = {
+  obj: initialState,
+};
+
+export default BandForm;

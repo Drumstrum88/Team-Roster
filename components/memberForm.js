@@ -111,8 +111,8 @@ function MemberForm({ obj }) {
           >
             <option value="">Select a Band</option>
             {bands.map((band) => (
-              <option key={band.firebaseKey} value={band.name}>
-                {band.name}
+              <option key={band.firebaseKey} value={band.bandName}>
+                {band.bandName}
               </option>
             ))}
           </Form.Select>
